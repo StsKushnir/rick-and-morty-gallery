@@ -57,14 +57,23 @@ export default function Home() {
         />
       </header>
       <main className=" flex min-h-screen flex-col items-center justify-between p-6 bg-[#e9dbb4]">
-        <h1 className="text-2xl font-bold leading-loose">
+        <h1 className="text-2xl font-bold leading-loose mb-6">
           Rick and Morty Gallery
         </h1>
         <Filters />
         {charactersStatus === "failed" ? (
-          <p className="text-red-500">Something went wrong</p>
+          <>
+            <p className="text-red-500">Something went wrong</p>
+            <Image
+              src='/icons/rick-sanchez-wrong.svg'
+              alt='rick-sanchez-wrong'
+              width={250}
+              height={250}
+              className=""
+            />
+          </>
         ) : (
-          <ul className="flex flex-wrap justify-center gap-4 mt-20">
+          <ul className="flex flex-wrap justify-center gap-4 mt-10">
             {people.map((person) => (
               <li
                 key={person.id}
@@ -105,6 +114,7 @@ export default function Home() {
             width={50}
             height={50}
             className="rounded-full hover:scale-110 transition-all duration-300 ease-in-out"
+            unoptimized
           />
         </button>
       </main>

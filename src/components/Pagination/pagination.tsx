@@ -22,18 +22,18 @@ export const Pagination: React.FC<Props> = ({ currentPage, onPageChange }) => {
       }
       breakLabel={"..."}
       breakClassName={"flex items-center justify-center px-[10px] text-black"}
-      breakLinkClassName={classNames("px-[11px] py-[8px]")}
+      breakLinkClassName={"px-[11px] py-[8px]"}
       pageCount={TOTAL_PAGES}
       marginPagesDisplayed={1}
       pageRangeDisplayed={2}
       pageLinkClassName={"px-[11px] py-[8px]"}
       onPageChange={(data) => onPageChange(data.selected + 1)}
-      containerClassName={classNames("font-montserrat font-medium flex list-none p-5 justify-center my-5 gap-2")}
-      activeClassName={classNames("border-2 bg-[#f7a15a] border-black text-black")}
-      previousClassName={classNames("flex justify-center items-center w-8 h-8 cursor-pointer transition-colors duration-300 ease-in-out")}
-      nextClassName={classNames("flex justify-center items-center w-8 h-8 cursor-pointer transition-colors duration-300 ease-in-out")}
-      pageClassName={classNames("flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white cursor-pointer transition-colors duration-300 ease-in-out text-white hover:bg-white hover:text-black rounded-full")}
-      disabledClassName={classNames("cursor-not-allowed opacity-50")}
+      containerClassName={"font-montserrat font-medium flex list-none p-5 justify-center my-5 gap-2"}
+      activeClassName={"border-2 bg-black text-black"}
+      previousClassName={"flex justify-center items-center w-8 h-8 cursor-pointer transition-colors duration-300 ease-in-out"}
+      nextClassName={"flex justify-center items-center w-8 h-8 cursor-pointer transition-colors duration-300 ease-in-out"}
+      pageClassName={"flex justify-center items-center w-8 h-8 bg-transparent border-2 border-white cursor-pointer transition-colors duration-300 ease-in-out text-white hover:bg-white hover:text-black rounded-full"}
+      disabledClassName={"cursor-not-allowed opacity-50"}
       forcePage={currentPage - 1}
     />
   );

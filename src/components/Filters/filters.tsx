@@ -25,11 +25,11 @@ export const Filters: React.FC = () => {
   const allSpecies = Object.entries(Species);
 
   return (
-    <div className="flex-wrap md:flex-nowrap sm:flex sm:gap-x-2 mt-6">
+    <div className="w-full flex flex-col sm:w-[80%] sm:flex-row sm:gap-x-1">
       <TextField
         id="filled-basic"
         label="Filled"
-        className="mb-6 md:mb-0 w-[250px]"
+        className="w-full mb-2 sm:w-[40%]"
         value={charactersSearch}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
           dispatch(addSearch(event.target.value));
@@ -59,8 +59,8 @@ export const Filters: React.FC = () => {
           },
         }}
       />
-      <div className="flex flex-wrap md:mt-0 gap-x-2 ">
-        <FormControl fullWidth className="w-[150px] mb-2 md:mb-0">
+      <div className="flex w-full gap-x-1">
+        <FormControl fullWidth className="w-full ">
           <InputLabel id="demo-simple-select-label">Status</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -77,7 +77,7 @@ export const Filters: React.FC = () => {
           </Select>
         </FormControl>
 
-        <FormControl fullWidth className="w-[150px] mb-2 md:mb-0">
+        <FormControl fullWidth className="w-full ">
           <InputLabel id="demo-simple-select-label">Gender</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -94,7 +94,7 @@ export const Filters: React.FC = () => {
           </Select>
         </FormControl>
 
-        <FormControl fullWidth className="w-[150px]">
+        <FormControl fullWidth className="w-full">
           <InputLabel id="demo-simple-select-label">Species</InputLabel>
           <Select
             labelId="demo-simple-select-label"
