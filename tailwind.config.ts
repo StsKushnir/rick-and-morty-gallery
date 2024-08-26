@@ -16,5 +16,8 @@ const config: Config = {
     },
   },
   plugins: [],
+  transitionDuration: {
+    300: '300ms',
+  },
 };
 export default config;
